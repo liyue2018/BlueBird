@@ -6,5 +6,5 @@ export const appRoutes = [
 
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
-  { path: 'productDetail/:title', component: ProductDetailComponent}
+  { path: 'productDetail/:productId', component: ProductDetailComponent}
 ];

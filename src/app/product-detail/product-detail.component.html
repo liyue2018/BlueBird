@@ -1,5 +1,26 @@
 <div class="thumbnail">
     <img src="assets/1.jpeg" class="img-rounded detail-img" />
-    <h6 class="caption">{{ productTitle }}</h6>
-    <!-- <p>{{ productDesc }}</p> -->
+    <div>
+        <h5 class="caption pull-right">{{ product.price }}元</h5>
+        <h6>{{ product.title }}</h6>
+        <p>{{ product.desc }}</p>
+    </div>
+    <div>
+        <p class="pull-right">{{ comments.length}}</p>
+        <p>
+            <app-stars [rating]="product.rating"></app-stars>
+        </p>
+    </div>
+</div>
+<div class="well">
+    <div class="row" *ngFor="let comment of comments">
+        <hr />
+        <div class="col-md-12">
+            <app-stars [rating]="comment.rating"></app-stars>
+            <span>{{ comment.user}}</span>
+            <span class="pull-right">{{ comment.timestamp }}</span>
+            <p></p>
+            <p>{{ comment.content }}</p>
+        </div>
+    </div>
 </div>
