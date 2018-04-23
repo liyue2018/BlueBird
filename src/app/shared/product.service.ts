@@ -23,7 +23,11 @@ export class ProductService {
         new Comment(7,5,"2018-04-17 11:20:22","吴敏",4.5,"非常赞！"),
         new Comment(8,5,"2018-04-17 20:11:22","张三",4.5,"very good")
 
-  ]
+  ];
+
+    getAllCategories():string[] {
+      return ["电子","图书","游戏","玩具","厨具"];
+    }
      getProducts():Product[] {
          return this.products;
      }
