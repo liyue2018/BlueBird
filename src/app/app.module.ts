@@ -16,6 +16,9 @@ import { HomeComponent } from './home/home.component';
 import { appRoutes } from './app.routes';
 import { ProductService } from './shared/product.service';
 import { FilterPipe } from './pipe/filter.pipe';
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { UserRegisterComponent } from './user/user-register/user-register.component';
+import { MainContainerComponent } from './main-container/main-container.component';
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { FilterPipe } from './pipe/filter.pipe';
     StarsComponent,
     ProductDetailComponent,
     HomeComponent,
-    FilterPipe
+    FilterPipe,
+    UserLoginComponent,
+    UserRegisterComponent,
+    MainContainerComponent
   ],
   imports: [
     BrowserModule,
