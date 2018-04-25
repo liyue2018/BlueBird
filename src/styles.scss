@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-
-
+html{
+    height:100%;
+}
 body{
-    padding-top: 6em;
+    min-height:100%;
+    position:relative;
+    padding-bottom:12rem;
+    padding-top: 4rem;
+    font-family:Avenir-Medium,sans-serif !important;
+    color:#263239 !important;
+    background:#f8f4f3 !important;
 }

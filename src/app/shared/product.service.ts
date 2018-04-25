@@ -6,11 +6,14 @@ export class ProductService {
   constructor() { }
 
   private products:Product[] = [
-        new Product(1,"第一个商品",39.98,4.5,"这是我创建的第一个商品",["电子","图书"]),
-        new Product(2,"第二个商品",9.98,2.5,"这是我创建的第二个商品",["电子"]),
-        new Product(3,"第三个商品",19.98,3.5,"这是我创建的第三个商品",["游戏","图书"]),
-        new Product(4,"第四个商品",29.98,1.5,"这是我创建的第四个商品",["电子","玩具"]),
-        new Product(5,"第五个商品",69.98,4.5,"这是我创建的第五个商品",["电子","图书","厨具"])
+        new Product(1,"Inside Venture Capital",'WEEKLY',39.98,4.5,"The latest deals, news, and firms in venture capital",["电子","图书"]),
+        new Product(2,"Inside Daily Brief",'DAILY',39.98,4.5,"A concise presentation of the world's most important, interesting news",["电子","图书"]),
+        new Product(3,"Inside Bitcoin",'TWICE WEEKLY',39.98,4.5,"Tracking trends, news, and analysis around Bitcoin and cryptocurrencies",["电子","图书"]),
+        new Product(4,"Inside Cloud",'DAILY',39.98,4.5,"Cloud computing, enterprise storage, big data, and more.",["电子","图书"]),
+        new Product(5,"Inside Wine",'WEEKLY',39.98,4.5,"The latest deals, news, and firms in venture capital",["电子","图书"]),
+        new Product(6,"Inside Amazon",'DAILY',39.98,4.5,"Grab the carefully selected updates and tips right from the grape vine!",["电子","图书"]),
+        new Product(7,"Inside Podcasting",'WEEKLY',39.98,4.5,"The best source of in-depth news and analysis about Amazon",["电子","图书"]),
+        new Product(8,"Inside San Francisco",'TWICE WEEKLY',39.98,4.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
      ];
 
   private comments:Comment[] = [
@@ -44,6 +47,7 @@ export class Product {
     constructor(
        public id: number,
        public title: string,
+       public tag: string,
        public price: number,
        public rating: number,
        public desc: string,

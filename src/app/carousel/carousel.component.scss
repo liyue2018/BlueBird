@@ -2,9 +2,19 @@
 * @Author: liyue2018
 * @Date:   2018-04-14 15:46:27
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-04-14 17:12:18
+* @Last Modified time: 2018-04-25 15:17:16
 */
-.carousel-inner .item img{
+.carousel{
+    width:100%;
+    min-height:100%;
+    margin-top: -2rem;
+}
+.carousel-inner .item>img{
     width: 100%;
-    height: 300px;
+    height: auto;
+}
+.carousel-caption{
+    bottom: 30%;
+    left: 10%;
+    text-align: left;
 }

@@ -7,7 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { SearchComponent } from './search/search.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProductComponent } from './product/product.component';
 import { StarsComponent } from './stars/stars.component';
@@ -26,7 +26,7 @@ import { MainContainerComponent } from './main-container/main-container.componen
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    SearchComponent,
+    SidebarComponent,
     CarouselComponent,
     ProductComponent,
     StarsComponent,
@@ -35,7 +35,7 @@ import { MainContainerComponent } from './main-container/main-container.componen
     FilterPipe,
     UserLoginComponent,
     UserRegisterComponent,
-    MainContainerComponent
+    MainContainerComponent,
   ],
   imports: [
     BrowserModule,

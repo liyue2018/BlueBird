@@ -3,11 +3,11 @@ import { FormGroup, FormBuilder, Validators,FormControl} from '@angular/forms';
 import { ProductService } from '../shared/product.service';
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.scss']
 })
-export class SearchComponent implements OnInit {
+export class SidebarComponent implements OnInit {
 
     formModel: FormGroup;
     categories: string[];

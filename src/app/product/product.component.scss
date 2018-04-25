@@ -2,8 +2,96 @@
 * @Author: liyue2018
 * @Date:   2018-04-14 15:46:41
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-04-19 10:15:29
+* @Last Modified time: 2018-04-25 17:05:54
 */
+
+
+.bg-white{
+    padding: 6rem 0;
+    text-align:center;
+}
 .search-box{
     margin-top: 1em;
+    .form-control{
+        background:#f8f4f3;
+    }
+}
+.s-title{
+    color:#bac6cd;
+}
+
+.detail-item{
+        // min-height: 26rem;
+        padding-bottom: 2rem;
+        height:auto;
+}
+.thumbnail{
+    border:none;
+    min-height:350px;
+    height:auto;
+    padding-top:2rem;
+    position:relative;
+    .title-img{
+        width: 6rem;
+        height: 6rem;
+        border-radius:50%;
+        transition: 1s clip-path;
+        -webkit-transition: all .4s ease;
+           -moz-transition: all .4s ease;
+            -ms-transition: all .4s ease;
+             -o-transition: all .4s ease;
+                transition: all .4s ease;
+         &:hover {
+             -webkit-transform: scale(1.2);
+                -moz-transform: scale(1.2);
+                 -ms-transform: scale(1.2);
+                  -o-transform: scale(1.2);
+                     transform: scale(1.2);
+        }
+    }
+    .tag{
+        position:absolute;
+        top: 0.6rem;
+        right: 0.6rem;
+        background:#FFEEE2;
+        max-width:5rem;
+        padding: 0.2rem;
+        color:#ff5c03;
+        text-align:center;
+        border-radius:3px;
+        width:auto;
+    }
+    .caption{
+        text-align:center;
+        color:#707070;
+    }
+    .list-subscription-action>a{
+        border-radius:4px;
+        border: 2px solid #ebe8e7;
+        text-align:center;
+        padding: 0.2rem;
+        height: 5rem;
+        line-height: 5rem;
+        color:#8d8d8d;
+        transition: all .5s ease-out;
+        position: absolute;
+        bottom: 1rem;
+        width:96%;
+        &:hover{
+            border-color:#ff5c03;
+            background:#ebe8e7;
+            color:#263239;
+            text-decoration:none;
+        }
+        i{
+            // padding:0 2rem;
+        }
+        i.glyphicon-envelope{
+            color:#ff5c03;
+            padding-right:2rem;
+        }
+    }
+    .hot-heart{
+
+    }
 }
