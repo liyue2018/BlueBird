@@ -1,0 +1,33 @@
+<div class="schedule">
+    <div class="container">
+        <div class="row">
+            <h2 class="head-title">Schedule</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+             <p>July 25</p>
+             <ul class="list-unstyled list">
+                <li *ngFor="let schedule of schedules" class="list-item">
+                    <strong>{{ schedule.timer }}</strong>
+                    <strong>{{ schedule.solt }}</strong>
+                    <span class="bot"></span>
+                    <span>{{ schedule.event }}</span>
+                    <small class="describe">{{ schedule.describe }}</small>
+                </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-xs-12">
+             <p>July 25</p>
+             <ul class="list-unstyled list">
+                <li *ngFor="let schedule of schedules" class="list-item">
+                    <strong>{{ schedule.timer }}</strong>
+                    <strong>{{ schedule.solt }}</strong>
+                    <span class="bot"></span>
+                    <span>{{ schedule.event }}</span>
+                    <small class="describe">{{ schedule.describe }}</small>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+</div>

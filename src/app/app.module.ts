@@ -19,6 +19,8 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { MainContainerComponent } from './main-container/main-container.component';
+import { AboutComponent } from './about/about.component';
+import { TimerComponent } from './timer/timer.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { MainContainerComponent } from './main-container/main-container.componen
     UserLoginComponent,
     UserRegisterComponent,
     MainContainerComponent,
+    AboutComponent,
+    TimerComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-04-14 15:46:27
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-04-25 15:17:16
+* @Last Modified time: 2018-04-26 01:02:03
 */
 .carousel{
     width:100%;
@@ -17,4 +17,7 @@
     bottom: 30%;
     left: 10%;
     text-align: left;
+    .title{
+        font-size:6rem;
+    }
 }

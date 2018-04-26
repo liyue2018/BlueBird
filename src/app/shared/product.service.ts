@@ -7,13 +7,20 @@ export class ProductService {
 
   private products:Product[] = [
         new Product(1,"Inside Venture Capital",'WEEKLY',39.98,4.5,"The latest deals, news, and firms in venture capital",["电子","图书"]),
-        new Product(2,"Inside Daily Brief",'DAILY',39.98,4.5,"A concise presentation of the world's most important, interesting news",["电子","图书"]),
+        new Product(2,"Inside Daily Brief",'DAILY',39.98,1.5,"A concise presentation of the world's most important, interesting news",["电子","图书"]),
         new Product(3,"Inside Bitcoin",'TWICE WEEKLY',39.98,4.5,"Tracking trends, news, and analysis around Bitcoin and cryptocurrencies",["电子","图书"]),
-        new Product(4,"Inside Cloud",'DAILY',39.98,4.5,"Cloud computing, enterprise storage, big data, and more.",["电子","图书"]),
-        new Product(5,"Inside Wine",'WEEKLY',39.98,4.5,"The latest deals, news, and firms in venture capital",["电子","图书"]),
+        new Product(4,"Inside Cloud",'DAILY',39.98,1.5,"Cloud computing, enterprise storage, big data, and more.",["电子","图书"]),
+        new Product(5,"Inside Wine",'WEEKLY',39.98,2.5,"The latest deals, news, and firms in venture capital",["电子","图书"]),
         new Product(6,"Inside Amazon",'DAILY',39.98,4.5,"Grab the carefully selected updates and tips right from the grape vine!",["电子","图书"]),
-        new Product(7,"Inside Podcasting",'WEEKLY',39.98,4.5,"The best source of in-depth news and analysis about Amazon",["电子","图书"]),
+        new Product(7,"Inside Podcasting",'WEEKLY',39.98,3.5,"The best source of in-depth news and analysis about Amazon",["电子","图书"]),
         new Product(8,"Inside San Francisco",'TWICE WEEKLY',39.98,4.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
+        new Product(9,"Inside Security",'WEEKLY',39.98,2.5,"David Strom's in-depth cybersecurity news and analysis",["电子","图书"]),
+        new Product(10,"Inside Beer",'TWICE WEEKLY',39.98,1.5,"Industry buzz for professionals who make, sell, or distribute beer.",["电子","图书"]),
+        new Product(11,"Inside San Francisco",'TWICE WEEKLY',39.98,4.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
+        new Product(12,"Inside San Francisco",'WEEKLY',39.98,4.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
+        new Product(13,"Inside San Francisco",'WEEKLY',39.98,2.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
+        new Product(14,"Inside Space",'TWICE WEEKLY',39.98,3.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
+        new Product(15,"Inside Google & Alphabet",'TWICE WEEKLY',39.98,2.5,"A journey into the depths of outer space and limitless opportunities of space travel",["电子","图书"]),
      ];
 
   private comments:Comment[] = [
@@ -27,6 +34,18 @@ export class ProductService {
         new Comment(8,5,"2018-04-17 20:11:22","张三",4.5,"very good")
 
   ];
+  private schedules:Schedule[] = [
+        new Schedule(1,'9:00','AM','Registration',''),
+        new Schedule(2,'10:00','AM','Adam Wathan','Resisting Complexity'),
+        new Schedule(3,'11:00','AM','Adam Wathan','Full-Stack Testing Strategies'),
+        new Schedule(4,'12:00','PM','Jason McCreary','Laravel By The Numbers'),
+        new Schedule(5,'1:00','PM','Adam Wathan','Resisting Complexity'),
+        new Schedule(6,'2:30','PM','Adam Wathan','Resisting Complexity'),
+        new Schedule(7,'3:30','PM','Evan You','Vuex Overview'),
+        new Schedule(8,'4:30','PM','Science Storms After Party',''),
+        new Schedule(9,'5:30','PM','Adam Wathan','Resisting Complexity'),
+        new Schedule(10,'6:30','PM','Taylor Otwell','Keynote'),
+  ];
 
     getAllCategories():string[] {
       return ["电子","图书","游戏","玩具","厨具"];
@@ -39,6 +58,12 @@ export class ProductService {
      }
      getCommentsForProductId(id:number):Comment[] {
          return this.comments.filter((comment: Comment) => comment.productId == id);
+     }
+
+     // 获取表单数据
+
+     getSchedules():Schedule[]{
+       return this.schedules;
      }
 
 }
@@ -66,3 +91,15 @@ export class Comment{
         ){}
 }
 
+// Schedule
+
+ export class Schedule {
+     constructor(
+           public id: number,
+           public timer: string,
+           public solt:  string,
+           public event: string,
+           public describe: string
+         ) {
+     }
+ }

@@ -1,4 +1,4 @@
-
+<div class="col-md-10 col-lg-10 col-sm-12 col-xs-12">
 <div class="bg-white">
     <div class="row">
         <div class="col-sm-12">
@@ -11,6 +11,13 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="jumbotron">
+       <h1>Are you a top vet?</h1>
+       <p>List your veterinary practice and grow your business online</p>
+       <p><a class="btn btn-primary btn-sm btn-tree" href="#" role="button">GET LISTED TODAY</a></p>
+    </div>
+</div>
 
 <div class="row search-box">
     <div class="col-md-12 col-sm-12">
@@ -20,7 +27,7 @@
     </div>
 </div>
 <div class="row">
-    <div *ngFor="let product of products | filter: 'title':keyword" class="col-md-3 col-sm-3 detail-item">
+    <div *ngFor="let product of products | filter: 'title':keyword" class="col-lg-3 col-md-6 col-sm-6 col-xs-12 detail-item">
       <div class="thumbnail">
          <img src="assets/small_x2_Wine.jpg" class="img-responsive title-img" alt="头像图片" />
          <div class="tag small">{{ product.tag }}</div>
@@ -42,3 +49,7 @@
       </div>
     </div>
 </div>
+</div>
+
+
+

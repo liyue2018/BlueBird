@@ -4,6 +4,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { MainContainerComponent } from './main-container/main-container.component';
+import { ProductComponent } from './product/product.component';
 
 export const appRoutes = [
 

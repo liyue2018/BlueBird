@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-04-14 15:46:41
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-04-25 17:05:54
+* @Last Modified time: 2018-04-26 00:49:27
 */
 
 
@@ -11,7 +11,10 @@
     text-align:center;
 }
 .search-box{
-    margin-top: 1em;
+    margin:{
+        bottom:3rem;
+        top: 1rem;
+    }
     .form-control{
         background:#f8f4f3;
     }
@@ -27,7 +30,7 @@
 }
 .thumbnail{
     border:none;
-    min-height:350px;
+    min-height:320px;
     height:auto;
     padding-top:2rem;
     position:relative;
@@ -35,7 +38,7 @@
         width: 6rem;
         height: 6rem;
         border-radius:50%;
-        transition: 1s clip-path;
+        margin-top:-3rem;
         -webkit-transition: all .4s ease;
            -moz-transition: all .4s ease;
             -ms-transition: all .4s ease;
@@ -93,5 +96,18 @@
     }
     .hot-heart{
 
+    }
+}
+
+.jumbotron{
+    background:#707070;
+    text-align: center;
+    color:#fff;
+    background:url("/assets/bg-1.png") no-repeat;
+    background-position:center;
+    .btn-tree{
+        background:#ffb400;
+        border-color:#ffb400;
+        border-radius:6px;
     }
 }
