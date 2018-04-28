@@ -6,21 +6,21 @@ export class ProductService {
   constructor() { }
 
   private products:Product[] = [
-        new Product(1,"Inside Venture Capital",'WEEKLY',39.98,4.5,"The latest deals, news, and firms in venture capital",["电子","图书"]),
-        new Product(2,"Inside Daily Brief",'DAILY',39.98,1.5,"A concise presentation of the world's most important, interesting news",["电子","图书"]),
-        new Product(3,"Inside Bitcoin",'TWICE WEEKLY',39.98,4.5,"Tracking trends, news, and analysis around Bitcoin and cryptocurrencies",["电子","图书"]),
-        new Product(4,"Inside Cloud",'DAILY',39.98,1.5,"Cloud computing, enterprise storage, big data, and more.",["电子","图书"]),
-        new Product(5,"Inside Wine",'WEEKLY',39.98,2.5,"The latest deals, news, and firms in venture capital",["电子","图书"]),
-        new Product(6,"Inside Amazon",'DAILY',39.98,4.5,"Grab the carefully selected updates and tips right from the grape vine!",["电子","图书"]),
-        new Product(7,"Inside Podcasting",'WEEKLY',39.98,3.5,"The best source of in-depth news and analysis about Amazon",["电子","图书"]),
-        new Product(8,"Inside San Francisco",'TWICE WEEKLY',39.98,4.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
-        new Product(9,"Inside Security",'WEEKLY',39.98,2.5,"David Strom's in-depth cybersecurity news and analysis",["电子","图书"]),
-        new Product(10,"Inside Beer",'TWICE WEEKLY',39.98,1.5,"Industry buzz for professionals who make, sell, or distribute beer.",["电子","图书"]),
-        new Product(11,"Inside San Francisco",'TWICE WEEKLY',39.98,4.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
-        new Product(12,"Inside San Francisco",'WEEKLY',39.98,4.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
-        new Product(13,"Inside San Francisco",'WEEKLY',39.98,2.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
-        new Product(14,"Inside Space",'TWICE WEEKLY',39.98,3.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
-        new Product(15,"Inside Google & Alphabet",'TWICE WEEKLY',39.98,2.5,"A journey into the depths of outer space and limitless opportunities of space travel",["电子","图书"]),
+        new Product(1,"Inside Venture Capital",'WEEKLY','assets/small_x2_Wine.jpg',39.98,4.5,"The latest deals, news, and firms in venture capital",["电子","图书"]),
+        new Product(2,"Inside Daily Brief",'DAILY','assets/small_x2_Screen_Shot_2016-08-18_at_10.43.17_AM.png',39.98,1.5,"A concise presentation of the world's most important, interesting news",["电子","图书"]),
+        new Product(3,"Inside Bitcoin",'TWICE WEEKLY','assets/small_x2_o-PINT-GLASS-BEER-facebook.jpg',39.98,4.5,"Tracking trends, news, and analysis around Bitcoin and cryptocurrencies",["电子","图书"]),
+        new Product(4,"Inside Cloud",'DAILY','assets/small_x2_Screen_Shot_2016-12-07_at_11.01.32_AM.png',39.98,1.5,"Cloud computing, enterprise storage, big data, and more.",["电子","图书"]),
+        new Product(5,"Inside Wine",'WEEKLY','assets/small_x2_o-PINT-GLASS-BEER-facebook.jpg',39.98,2.5,"The latest deals, news, and firms in venture capital",["电子","图书"]),
+        new Product(6,"Inside Amazon",'DAILY','assets/small_x2_Screen_Shot_2016-08-22_at_1.39.14_PM.png',39.98,4.5,"Grab the carefully selected updates and tips right from the grape vine!",["电子","图书"]),
+        new Product(7,"Inside Podcasting",'WEEKLY','assets/small_x2_Screen_Shot_2016-08-18_at_10.43.17_AM.png',39.98,3.5,"The best source of in-depth news and analysis about Amazon",["电子","图书"]),
+        new Product(8,"Inside San Francisco",'TWICE WEEKLY','assets/small_x2_Screen_Shot_2016-08-22_at_1.39.14_PM.png',39.98,4.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
+        new Product(9,"Inside Security",'WEEKLY','assets/small_x2_o-PINT-GLASS-BEER-facebook.jpg',39.98,2.5,"David Strom's in-depth cybersecurity news and analysis",["电子","图书"]),
+        new Product(10,"Inside Beer",'TWICE WEEKLY','assets/small_x2_o-PINT-GLASS-BEER-facebook.jpg',39.98,1.5,"Industry buzz for professionals who make, sell, or distribute beer.",["电子","图书"]),
+        new Product(11,"Inside San Francisco",'TWICE WEEKLY','assets/small_x2_Screen_Shot_2016-12-07_at_11.01.32_AM.png',39.98,4.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
+        new Product(12,"Inside San Francisco",'WEEKLY','assets/small_x2_Screen_Shot_2016-08-18_at_10.43.17_AM.png',39.98,4.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
+        new Product(13,"Inside San Francisco",'WEEKLY','assets/small_x2_o-PINT-GLASS-BEER-facebook.jpg',39.98,2.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
+        new Product(14,"Inside Space",'TWICE WEEKLY','assets/small_x2_Screen_Shot_2017-06-05_at_11.40.34_PM.png',39.98,3.5,"Everything you need to know about the resurgence of the spoken word",["电子","图书"]),
+        new Product(15,"Inside Google & Alphabet",'TWICE WEEKLY','assets/small_x2_Wine.jpg',39.98,2.5,"A journey into the depths of outer space and limitless opportunities of space travel",["电子","图书"]),
      ];
 
   private comments:Comment[] = [
@@ -73,12 +73,14 @@ export class Product {
        public id: number,
        public title: string,
        public tag: string,
+       public image:string,
        public price: number,
        public rating: number,
        public desc: string,
        public categories: Array<string>
     ){}
 }
+
 
 export class Comment{
     constructor(
@@ -99,7 +101,7 @@ export class Comment{
            public timer: string,
            public solt:  string,
            public event: string,
-           public describe: string
+           public describe: string,
          ) {
      }
  }

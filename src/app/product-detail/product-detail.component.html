@@ -1,40 +1,101 @@
-<div class="thumbnail">
-    <img src="assets/3.png" class="img-rounded detail-img" />
-    <div>
-        <h5 class="caption pull-right">{{ product.price }}元</h5>
-        <h6>{{ product.title }}</h6>
-        <p>{{ product.desc }}</p>
-    </div>
-    <div>
-        <p class="pull-right">{{ comments.length}}</p>
-        <p>
+<section class="main-content">
+    <header id="header" class="thumbnail">
+    </header><!-- /header -->
+    <section class="content-wrapper">
+        <header class="header">
+            <h1 class="title">{{ product.title }}</h1>
             <app-stars [rating]="product.rating"></app-stars>
-        </p>
-    </div>
-</div>
-<div class="well">
-    <div>
-        <button type="button" class="btn btn-success" (click)="isCommentHidden = !isCommentHidden">发表评论</button>
-    </div>
-    <div [hidden]="isCommentHidden">
-        <div>
-            <app-stars [(rating)]="newRating" [readonly]="false"></app-stars>
+            <p class="desc">{{ product.desc }}</p>
+        </header>
+        <section class="body">
+            <p>不同地区种植出来的咖啡具有不同的风味——一个国家特别的土壤、气候条件和种植方式使得该国出产的咖啡具有特别的风味。法国的酿酒大师把这种现象叫做“地域风格”。</p>
+            <p>在地理概念上，全球性的咖啡种植区有三个——东非和阿拉伯半岛，东南亚和环太平洋地区，拉丁美洲。</p>
+            <blockquote cite="http://example.com/facts">
+                <p>某些种类的咖啡树能长到30至40英尺高。</p>
+            </blockquote>
+            <p>不同地区种植出来的咖啡具有不同的风味——一个国家特别的土壤、气候条件和种植方式使得该国出产的咖啡具有特别的风味。法国的酿酒大师把这种现象叫做“地域风格”。</p>
+
+        </section>
+        <!-- 评论区 -->
+        <div class="well comment">
+            <div>
+                <button type="button" class="btn btn-success" (click)="isCommentHidden = !isCommentHidden">发表评论</button>
+            </div>
+            <div [hidden]="isCommentHidden">
+                <div class="comment-stars">
+                    受欢迎程度：
+                    <app-stars [(rating)]="newRating" [readonly]="false"></app-stars>
+                </div>
+                <div>
+                    <textarea [(ngModel)]="newComment" class="comment-textarea" rows="6"></textarea>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary" (click)="addComment()">提交</button>
+                </div>
+            </div>
+            <h4 class="more-comment">
+                更多评论<span class="label label-success">{{ comments.length }}</span>
+            </h4>
+            <div class="row" *ngFor="let comment of comments">
+                <hr />
+                <div class="col-md-12">
+                    <app-stars [rating]="comment.rating"></app-stars>
+                    <span>{{ comment.user}}</span>
+                    <span class="pull-right">{{ comment.timestamp | date:'yyyy-MM-dd HH:mm:ss' }}</span>
+                    <p></p>
+                    <p>{{ comment.content }}</p>
+                </div>
+            </div>
         </div>
-        <div>
-            <textarea [(ngModel)]="newComment"></textarea>
-        </div>
-        <div>
-            <button type="button" class="btn btn-primary" (click)="addComment()">提交</button>
-        </div>
+    </section>
+</section>
+
+<!-- 更多内容 -->
+
+<section class="more-wrapper">
+    <header id="header">
+        <h3 class="title">Popular Cities</h3>
+    </header><!-- /header -->
+    <div class="row">
+        <a class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
+            <div class="mulit-img">
+                <img src="assets/roast-story-kv.jpg" alt="咖啡" class="img-responsive header-img" />
+            </div>
+            <div class="content">
+                <span class="star"><i class="glyphicon glyphicon-star"></i></span>
+                <h4 class="title">咖啡烘焙</h4>
+                <p class="detail">更多地体现在我们为使每一颗咖啡豆具有上佳口味而花费的心血上。星巴克烘焙的颜色可以模仿，但它特别的风味却是无法模仿的。</p>
+                <small class="label">
+                     <span class="label-warning">咖啡知识</span>
+                </small>
+            </div>
+        </a>
+        <a class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
+            <div class="mulit-img">
+                <img src="assets/4-fundamentals-kv.jpg" alt="咖啡" class="img-responsive header-img" />
+            </div>
+            <div class="content">
+                <span class="star"><i class="glyphicon glyphicon-star"></i></span>
+                <h4 class="title">咖啡烘焙</h4>
+                <p class="detail">更多地体现在我们为使每一颗咖啡豆具有上佳口味而花费的心血上。星巴克烘焙的颜色可以模仿，但它特别的风味却是无法模仿的。</p>
+                <small class="label">
+                     <span class="label-warning">咖啡知识</span>
+                </small>
+            </div>
+        </a>
+        <a class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
+            <div class="mulit-img">
+                <img src="assets/coffee-cultivation-kv.jpg" alt="咖啡" class="img-responsive header-img" />
+            </div>
+            <div class="content">
+                <span class="star"><i class="glyphicon glyphicon-star"></i></span>
+                <h4 class="title">咖啡烘焙</h4>
+                <p class="detail">更多地体现在我们为使每一颗咖啡豆具有上佳口味而花费的心血上。星巴克烘焙的颜色可以模仿，但它特别的风味却是无法模仿的。</p>
+                <small class="label">
+                     <span class="label-warning">咖啡知识</span>
+                </small>
+            </div>
+        </a>
     </div>
-    <div class="row" *ngFor="let comment of comments">
-        <hr />
-        <div class="col-md-12">
-            <app-stars [rating]="comment.rating"></app-stars>
-            <span>{{ comment.user}}</span>
-            <span class="pull-right">{{ comment.timestamp }}</span>
-            <p></p>
-            <p>{{ comment.content }}</p>
-        </div>
-    </div>
-</div>
+</section>
+
