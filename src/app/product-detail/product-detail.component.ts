@@ -14,7 +14,7 @@ export class ProductDetailComponent implements OnInit {
     
     newComment: string = "";
     newRating: number = 5;
-    private isCommentHidden: boolean = true;
+    isCommentHidden: boolean = true;
 
   constructor(private routeInfo: ActivatedRoute, private productService:ProductService) { }
 

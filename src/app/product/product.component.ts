@@ -11,9 +11,9 @@ import { Product,ProductService } from '../shared/product.service';
 })
 export class ProductComponent implements OnInit {
 
-  private products:Array<Product>;
-  private keyword: string;
-  private titleFilter: FormControl = new FormControl();
+  products:Array<Product>;
+  keyword: string;
+  titleFilter: FormControl = new FormControl();
 
   constructor(private productService:ProductService) { 
       this.titleFilter.valueChanges

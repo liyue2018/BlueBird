@@ -14,8 +14,8 @@
                 </div>
             </div>
             <div [hidden]="formModel.get('username').valid || formModel.get('username').untouched" class="col-sm-offset-2 help-text">
-                <span class="text-danger" [hidden]="!formModel.hasError('minlength','username')">用户名最少4个字符</span>
-                <span class="text-danger" [hidden]="!formModel.hasError('required','username')">用户名是必填项</span>
+                <span class="text-danger" [hidden]="!formModel.hasError('minlength',['username'])">用户名最少4个字符</span>
+                <span class="text-danger" [hidden]="!formModel.hasError('required',['username'])">用户名是必填项</span>
             </div>
             <div class="form-group">
                 <label for="email" class="col-sm-2 control-label">常用邮箱：</label>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-offset-2 help-text" [hidden]="!formModel.hasError('same','passwordsGroup')">
+            <div class="col-sm-offset-2 help-text" [hidden]="!formModel.hasError('same',['passwordsGroup'])">
                 <span class="text-danger">密码和输入密码不一致呢</span>
             </div>
             <div class="form-group">
@@ -49,7 +49,7 @@
                     <input type="number" formControlName="mobile" class="form-control" name="mobile" placeholder="请输入正确的手机号码" />
                 </div>
                 <div [hidden]="formModel.get('mobile').valid || formModel.get('mobile').pristine" class="col-lg-offset-2 help-text">
-                     <span [hidden]="!formModel.hasError('mobile', 'mobile')" class="text-danger">
+                     <span [hidden]="!formModel.hasError('mobile', ['mobile'])" class="text-danger">
                            请输入正确的手机号码
                      </span>
                 </div>

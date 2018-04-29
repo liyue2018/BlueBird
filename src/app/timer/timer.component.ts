@@ -8,7 +8,7 @@ import { Schedule,ProductService } from '../shared/product.service';
 })
 export class TimerComponent implements OnInit {
 
-    private schedules:Schedule[];
+    schedules:Schedule[];
 
   constructor(private productService:ProductService) { 
       
