@@ -2,8 +2,22 @@
 * @Author: liyue2018
 * @Date:   2018-04-23 22:03:57
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-04-24 15:27:25
+* @Last Modified time: 2018-04-29 17:32:19
 */
 .error{
     border: 1px solid #a94442;
+}
+.form-control-feedback{
+    right:13px;
+}
+.text-danger{
+    // display: inline-block;
+    padding:{
+        left: 1rem;
+        top: 1rem;
+    }
+
+}
+.help-text{
+    margin-bottom:1rem;
 }
